@@ -1,1 +1,1 @@
-# Data_visualizing_web_app
+# Data_visualization_web_app
