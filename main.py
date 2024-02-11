@@ -7,10 +7,10 @@ import seaborn as sns
 # Set the page config
 st.set_page_config(page_title='Data Visualizer',
                    layout='centered',
-                   page_icon='📊')
+                   page_icon='📈')
 
 # Title
-st.title('📊  Data Visualizer')
+st.title('📈  Data Visualizer')
 
 working_dir = os.path.dirname(os.path.abspath(__file__))
 
