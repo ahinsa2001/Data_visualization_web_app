@@ -10,7 +10,7 @@ st.set_page_config(page_title='Data Visualizer',
                    page_icon='📈')
 
 # Title
-st.title('📈  Data Visualizer')
+st.title('📈  Data Visualization Web App')
 
 working_dir = os.path.dirname(os.path.abspath(__file__))
 
