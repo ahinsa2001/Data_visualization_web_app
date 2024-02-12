@@ -12,23 +12,31 @@ st.set_page_config(page_title='Data Visualizer',
 # Title
 st.title('📈  Data Visualization Web App')
 
-working_dir = os.path.dirname(os.path.abspath(__file__))
+#working_dir = os.path.dirname(os.path.abspath(__file__))
 
 # Specify the folder where your CSV files are located
-folder_path = f"{working_dir}/data"  # Update this to your folder path
+#folder_path = f"{working_dir}/data"  # Update this to your folder path
 
-# List all files in the folder
-files = [f for f in os.listdir(folder_path) if f.endswith('.csv')]
+# List all (.csv) files in the folder
+#files = [f for f in os.listdir(folder_path) if f.endswith('.csv')]
 
 # Dropdown to select a file
-selected_file = st.selectbox('Select a file', files, index=None)
+#selected_file = st.selectbox('Select a dataset file', files, index=None)
 
-if selected_file:
+# Upload a file
+uploaded_file = st.file_uploader("Choose a CSV file")
+if uploaded_file is not None:
+    bytes_data = uploaded_file.getvalue()
+
+if uploaded_file:
     # Construct the full path to the file
-    file_path = os.path.join(folder_path, selected_file)
+    #file_path = os.path.join(folder_path, selected_file)
 
     # Read the selected CSV file
-    df = pd.read_csv(file_path)
+    #df = pd.read_csv(file_path)
+
+    # Read the uploaded CSV file
+    df = pd.read_csv(uploaded_file)
 
     col1, col2 = st.columns(2)
 
